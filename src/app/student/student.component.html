@@ -1,0 +1,11 @@
+<p [ngClass]="{'red': isRed,'blue':!isRed}">student works!</p>
+<h1>{{Name}}</h1>
+<!--two way binding-->
+<input type="text" [(ngModel)]="Name"/>
+<input type="button" (click)=" isRed?(isRed=false):(isRed=true)"/>
+<ng-container *ngFor="let item of someList; let i=index">
+<ng-container *ngIf="item!='aaa'">
+   <h1>{{item}}</h1> 
+   <input type="button" (click)="onClick(item)"/>
+  </ng-container>  
+</ng-container>
